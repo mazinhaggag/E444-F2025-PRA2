@@ -30,7 +30,7 @@ def index():
         if not form.email.data.lower().endswith("@mail.utoronto.ca"):
             session["name"] = form.name.data
             session["email"] = None
-            flash("Please use your UofT email.")
+            flash("Please use your UofT email")
 
         return redirect(url_for('index'))
     return render_template('index.html',
